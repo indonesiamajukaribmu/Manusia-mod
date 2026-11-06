@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manusia, Tanah, dan Ujung Bumi — Refleksi Akademis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8F5;
+    --bg-alt: #F2EDE5;
+    --ink: #2C2520;
+    --ink-soft: #5C5248;
+    --ink-faint: #8A7E70;
+    --clay: #8B5A3C;
+    --clay-deep: #5C3A23;
+    --gold: #B8915A;
+    --line: #E5DDD2;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.75;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ============= HERO ============= */
+  .hero {
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(184,145,90,0.08) 0%, transparent 60%),
+      var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero .ornament {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 32px;
+    opacity: 0.7;
+  }
+
+  .hero .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--clay);
+    font-weight: 400;
+  }
+
+  .hero .subtitle {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+  }
+
+  .hero .bismillah {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+    font-size: 28px;
+    color: var(--clay-deep);
+    margin-bottom: 16px;
+  }
+
+  .hero .bismillah-translit {
+    font-size: 13px;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+  }
+
+  .hero .meta {
+    margin-top: 56px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 12px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .hero .meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero .meta span::before {
+    content: '';
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ============= SECTIONS ============= */
+  section.chapter {
+    padding: 96px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .chapter-num {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .chapter-num::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+
+  h2.chapter-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+    color: var(--ink);
+  }
+
+  h3 {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--clay-deep);
+    margin: 40px 0 16px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+
+  p.lead {
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    font-family: 'Lora', serif;
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+
+  /* ============= VERSE BLOCK ============= */
+  .verse {
+    background: var(--white);
+    border-left: 3px solid var(--clay);
+    padding: 32px 36px;
+    margin: 32px 0;
+    box-shadow: 0 1px 3px rgba(92,58,35,0.04);
+  }
+
+  .verse .ref {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .verse .arabic {
+    font-family: 'Noto Naskh Arabic', serif;
+    direction: rtl;
+    font-size: 26px;
+    line-height: 2;
+    color: var(--clay-deep);
+    margin-bottom: 20px;
+    text-align: right;
+    font-weight: 500;
+  }
+
+  .verse .translation {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink);
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+
+  .verse .attribution {
+    font-size: 12px;
+    color: var(--ink-faint);
+    letter-spacing: 0.04em;
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+    margin-top: 16px;
+  }
+
+  /* ============= HADITH BLOCK ============= */
+  .hadith {
+    background: linear-gradient(180deg, #F8F2E8 0%, #F2EDE5 100%);
+    padding: 40px 40px 32px;
+    margin: 36px 0;
+    border: 1px solid var(--line);
+    position: relative;
+  }
+
+  .hadith::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: -1px; right: -1px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--clay) 0%, var(--gold) 100%);
+  }
+
+  .hadith .label {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--clay);
+    background: var(--white);
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  .hadith .arabic {
+    font-family: 'Noto Naskh Arabic', serif;
+    direction: rtl;
+    font-size: 22px;
+    line-height: 2.1;
+    color: var(--clay-deep);
+    margin-bottom: 24px;
+    text-align: justify;
+    text-align-last: right;
+    font-weight: 500;
+  }
+
+  .hadith .translation {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .hadith .source {
+    font-size: 12px;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+  }
+
+  /* ============= TAFSIR QUOTE ============= */
+  .tafsir {
+    margin: 32px 0;
+    padding: 24px 32px;
+    background: var(--bg-alt);
+    border-left: 2px solid var(--gold);
+  }
+
+  .tafsir .scholar {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .tafsir p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 0;
+    line-height: 1.7;
+  }
+
+  /* ============= PULLQUOTE ============= */
+  .pullquote {
+    margin: 56px 0;
+    text-align: center;
+    padding: 0 32px;
+  }
+
+  .pullquote .arabic {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+    font-size: 32px;
+    color: var(--clay-deep);
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  .pullquote .trans {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-soft);
+  }
+
+  .pullquote .divider {
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    margin: 16px auto;
+  }
+
+  /* ============= DIAGRAM ============= */
+  .diagram-wrap {
+    background: var(--white);
+    padding: 48px 24px;
+    margin: 48px 0;
+    border: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .diagram-wrap .caption {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .diagram-wrap .title {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+
+  .diagram-wrap svg {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+  }
+
+  .diagram-wrap .legend {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  .diagram-wrap .legend span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .diagram-wrap .legend i {
+    width: 10px; height: 10px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  /* ============= KEY CONCEPT GRID ============= */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 32px 0;
+  }
+
+  .concept-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 28px;
+    text-align: center;
+  }
+
+  .concept-card .icon {
+    width: 40px; height: 40px;
+    margin: 0 auto 16px;
+  }
+
+  .concept-card .arabic {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+    font-size: 22px;
+    color: var(--clay-deep);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .concept-card .term {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .concept-card .desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* ============= EARTH ILLUSTRATION ============= */
+  .earth-illustration {
+    text-align: center;
+    margin: 48px 0;
+  }
+
+  .earth-illustration svg {
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+  }
+
+  .earth-illustration .caption {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-faint);
+    margin-top: 16px;
+  }
+
+  /* ============= FOOTER ============= */
+  footer {
+    padding: 96px 0 64px;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    text-align: center;
+  }
+
+  footer .ornament {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 24px;
+    opacity: 0.5;
+  }
+
+  footer .closing {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+    font-size: 24px;
+    color: var(--clay-deep);
+    margin-bottom: 12px;
+  }
+
+  footer .closing-translit {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin-bottom: 40px;
+  }
+
+  footer .colophon {
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  footer .colophon span {
+    margin: 0 12px;
+  }
+
+  /* ============= NAV ============= */
+  nav.toc {
+    position: sticky;
+    top: 0;
+    background: rgba(250,248,245,0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    z-index: 100;
+    padding: 12px 0;
+  }
+
+  nav.toc .container {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  nav.toc .container::-webkit-scrollbar { display: none; }
+
+  nav.toc a {
+    font-size: 12px;
+    color: var(--ink-faint);
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+
+  nav.toc a:hover { color: var(--clay); }
+
+  /* ============= RESPONSIVE ============= */
+  @media (max-width: 640px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .verse { padding: 24px 20px; }
+    .hadith { padding: 28px 20px; }
+    .tafsir { padding: 20px 20px; }
+    .hero { padding: 80px 0 60px; }
+    .hero .meta { flex-direction: column; gap: 12px; }
+    section.chapter { padding: 64px 0; }
+    .verse .arabic { font-size: 22px; }
+    .hadith .arabic { font-size: 19px; }
+  }
+
+  /* ============= TYPESETTING DETAILS ============= */
+  .drop-cap::first-letter {
+    font-family: 'Lora', serif;
+    font-size: 64px;
+    font-weight: 600;
+    float: left;
+    line-height: 0.85;
+    margin: 8px 12px 0 0;
+    color: var(--clay);
+  }
+
+  .footnote {
+    font-size: 13px;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    margin-top: 32px;
+    line-height: 1.6;
+  }
+
+  .footnote sup { color: var(--clay); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- ============= NAV ============= -->
+<nav class="toc">
+  <div class="container">
+    <a href="#hero">Pembuka</a>
+    <a href="#bab1">I. Dari Tanah</a>
+    <a href="#bab2">II. Sifat Sempurna</a>
+    <a href="#bab3">III. Genggam Bumi</a>
+    <a href="#bab4">IV. Pertengahan</a>
+    <a href="#bab5">V. Ujung Bumi</a>
+    <a href="#bab6">VI. Diagram</a>
+    <a href="#bab7">VII. Penutup</a>
+  </div>
+</nav>
+
+<!-- ============= HERO ============= -->
+<header class="hero" id="hero">
+  <div class="container">
+    <!-- Geometric ornament: 8-point star -->
+    <svg class="ornament" viewBox="0 0 64 64" fill="none">
+      <g stroke="#8B5A3C" stroke-width="1" opacity="0.9">
+        <rect x="8" y="8" width="48" height="48" transform="rotate(0 32 32)"/>
+        <rect x="8" y="8" width="48" height="48" transform="rotate(45 32 32)"/>
+        <circle cx="32" cy="32" r="14"/>
+        <circle cx="32" cy="32" r="22"/>
+      </g>
+      <circle cx="32" cy="32" r="3" fill="#B8915A"/>
+    </svg>
+
+    <div class="eyebrow">Refleksi Akademis · Teologi Islam</div>
+
+    <h1>Manusia, Tanah,<br>dan <em>Ujung Bumi</em></h1>
+
+    <p class="subtitle">
+      Tentang asal, kesaksian, dan kesulitan—mengapa sebagian manusia
+      diciptakan dari tanah yang mudah, sebagian dari tanah yang sulit,
+      dan yang paling berat berada di ujung bumi.
+    </p>
+
+    <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    <div class="bismillah-translit">Bismillāhir-raḥmānir-raḥīm</div>
+
+    <div class="meta">
+      <span>Sumber: Al-Qur'ān &amp; Sunnah</span>
+      <span>Tafsir: Ibnu Katsīr, Quraish Shihab</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============= BAB 1: PENCIPTAAN DARI TANAH ============= -->
+<section class="chapter" id="bab1">
+  <div class="container">
+    <div class="chapter-num">Bab I</div>
+    <h2 class="chapter-title">Dari Tanah Kami Ciptakan Manusia</h2>
+
+    <p class="lead">
+      Al-Qur'ān membuka wacana tentang manusia bukan dari cahaya,
+      bukan dari api, melainkan dari materi yang paling dekat dengan kakinya: tanah.
+      Pilihan ini bukan kebetulan kosmologis—ia adalah pernyataan ontologis
+      tentang siapa manusia, dari mana ia berasal, dan ke mana ia kembali.
+    </p>
+
+    <p class="drop-cap">
+      Dalam tujuh surah berbeda, Al-Qur'ān menegaskan bahwa asal manusia adalah <em>ṭīn</em>
+      (tanah liat), <em>ṣalṣāl</em> (tanah kering berbunyi), dan <em>ḥama' masnūn</em>
+      (lumpur hitam berbau yang terbentuk lama). Tiga istilah ini tidak sinonim;
+      mereka menunjukkan fase-fase pembentukan: dari tanah basah, menjadi lumpur
+      yang memadat, lalu mengering seperti gerabah yang berbunyi saat diketuk.
+      Al-Qur'ān dengan demikian menggambarkan penciptaan manusia sebagai proses
+      keramik ilahi—Allah sebagai penggenggam, tanah sebagai bahan, dan ruh
+      sebagai napas yang menghidupkan.
+    </p>
+
+    <div class="verse">
+      <div class="ref">QS. Al-Ḥijr (15) : 26</div>
+      <div class="arabic">وَلَقَدْ خَلَقْنَا الْإِنسَانَ مِن صَلْصَالٍ مِّنْ حَمَأٍ مَّسْنُونٍ</div>
+      <div class="translation">
+        "Dan sungguh, Kami telah menciptakan manusia (Adam) dari tanah liat kering
+        yang berasal dari lumpur hitam yang diberi bentuk."
+      </div>
+      <div class="attribution">— Al-Qur'ān, Surah Al-Ḥijr ayat 26</div>
+    </div>
+
+    <p>
+      Ibnu Katsīr dalam <em>Tafsīr al-Qur'ān al-‘Aẓīm</em> menjelaskan bahwa
+      <em>ṣalṣāl</em> adalah tanah kering yang belum dibakar, yang apabila diketuk
+      akan berbunyi. <em>Ḥama'</em> berarti tanah yang telah berubah warna menjadi
+      hitam karena lama terendam, sedangkan <em>masnūn</em> berarti yang telah
+      terbentuk dan terkadung lama. Dengan demikian, tanah yang menjadi asal Adam
+      bukan tanah sembarangan, melainkan tanah yang telah melalui proses pematangan—
+      sebuah metafora tentang proses eksistensial yang panjang sebelum manusia
+      hadir dalam bentuknya yang final.
+    </p>
+
+    <div class="tafsir">
+      <div class="scholar">Tafsir · Ibnu Katsīr</div>
+      <p>
+        "Ṣalṣāl adalah tanah kering yang tidak dibakar; jika diketuk ia berbunyi.
+        Adapun ḥama' masnūn adalah lumpur yang telah lama berada sehingga berubah
+        menjadi hitam dan berbau. Maka Allah merangkai Adam dari materi yang
+        paling hina di pandangan mata, lalu memuliakannya dengan meniupkan ruh
+        ke dalamnya."
+      </p>
+    </div>
+
+    <p>
+      Surah Al-Mu'minūn menambahkan dimensi lain dengan istilah <em>sulālah</em>
+      yang berarti "sari" atau "ekstrak"—menunjukkan bahwa tubuh manusia bukanlah
+      tanah mentah, melainkan hasil penyaringan dan pemurnian dari berbagai unsur
+      tanah yang terpilih.
+    </p>
+
+    <div class="verse">
+      <div class="ref">QS. Al-Mu'minūn (23) : 12</div>
+      <div class="arabic">وَلَقَدْ خَلَقْنَا الْإِنسَانَ مِن سُلَالَةٍ مِّن طِينٍ</div>
+      <div class="translation">
+        "Dan sungguh, Kami telah menciptakan manusia dari saripati tanah."
+      </div>
+      <div class="attribution">— Al-Qur'ān, Surah Al-Mu'minūn ayat 12</div>
+    </div>
+
+    <p>
+      Prof. Quraish Shihab dalam <em>Tafsīr Al-Mishbāḥ</em> menekankan bahwa kata
+      <em>sulālah</em> menyiratkan bahwa jasad manusia mengandung elemen-elemen
+      yang juga terdapat dalam tanah: karbon, oksigen, hidrogen, nitrogen, kalsium,
+      fosfor, kalium, natrium, magnesium, besi, seng, tembaga, mangan, dan sejumlah
+      unsur mikro lainnya. Komposisi ini—dalam ilmu biokimia modern—persis menyamai
+      komposisi kerak bumi. Al-Qur'ān, dengan demikian, memberi pernyataan yang
+      secara ilmiah dapat diverifikasi: manusia, secara biologis, adalah tanah yang
+      telah diolah menjadi hidup.
+    </p>
+
+    <div class="earth-illustration">
+      <!-- SVG: layers of earth becoming human -->
+      <svg viewBox="0 0 540 240" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#C9A57A"/>
+            <stop offset="40%" stop-color="#A57648"/>
+            <stop offset="75%" stop-color="#6B4226"/>
+            <stop offset="100%" stop-color="#3D2517"/>
+          </linearGradient>
+          <linearGradient id="human" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#D9B894"/>
+            <stop offset="100%" stop-color="#8B5A3C"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Earth layers -->
+        <rect x="40" y="60" width="160" height="160" fill="url(#soil)" opacity="0.9"/>
+        <line x1="40" y1="90" x2="200" y2="90" stroke="#fff" stroke-width="0.5" opacity="0.4"/>
+        <line x1="40" y1="130" x2="200" y2="130" stroke="#fff" stroke-width="0.5" opacity="0.4"/>
+        <line x1="40" y1="170" x2="200" y2="170" stroke="#fff" stroke-width="0.5" opacity="0.4"/>
+
+        <text x="120" y="44" text-anchor="middle" font-family="Lora, serif" font-size="11" fill="#5C3A23" font-style="italic">tanah</text>
+        <text x="120" y="58" text-anchor="middle" font-family="Lora, serif" font-size="10" fill="#8A7E70">ṭīn · ṣalṣāl · ḥama'</text>
+
+        <!-- Arrow -->
+        <g stroke="#B8915A" stroke-width="1.5" fill="none">
+          <path d="M 220 140 Q 270 140 320 140" marker-end="url(#arrowhead)"/>
+        </g>
+        <defs>
+          <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M 0 0 L 8 4 L 0 8 z" fill="#B8915A"/>
+          </marker>
+        </defs>
+        <text x="270" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#8B5A3C" letter-spacing="1">PROSES</text>
+
+        <!-- Human silhouette -->
+        <g transform="translate(360, 60)">
+          <!-- head -->
+          <circle cx="60" cy="32" r="20" fill="url(#human)"/>
+          <!-- body -->
+          <path d="M 60 52 Q 30 60 30 110 L 30 160 L 50 160 L 50 110 L 70 110 L 70 160 L 90 160 L 90 110 Q 90 60 60 52 Z" fill="url(#human)" opacity="0.95"/>
+          <!-- arms -->
+          <path d="M 35 75 L 15 130 L 22 134 L 40 80 Z" fill="url(#human)" opacity="0.9"/>
+          <path d="M 85 75 L 105 130 L 98 134 L 80 80 Z" fill="url(#human)" opacity="0.9"/>
+        </g>
+
+        <text x="420" y="44" text-anchor="middle" font-family="Lora, serif" font-size="11" fill="#5C3A23" font-style="italic">manusia</text>
+        <text x="420" y="58" text-anchor="middle" font-family="Lora, serif" font-size="10" fill="#8A7E70">insān · sari tanah</text>
+
+        <!-- ground line -->
+        <line x1="20" y1="220" x2="520" y2="220" stroke="#E5DDD2" stroke-width="1"/>
+      </svg>
+      <div class="caption">Skema penciptaan: dari tanah berlapis menjadi jasad bernyawa</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= BAB 2: SIFAT SEMPURNA ============= -->
+<section class="chapter" id="bab2">
+  <div class="container">
+    <div class="chapter-num">Bab II</div>
+    <h2 class="chapter-title">Sifat Sempurna yang Diukir dari Tanah</h2>
+
+    <p class="lead">
+      Tanah yang hina dipilih bukan karena kelemahannya, melainkan karena
+      potensinya untuk menerima bentuk tertinggi. Al-Qur'ān menyebut manusia
+      diciptakan "dalam sebaik-baik bentuk"—sebuah puncak kosmik yang tidak
+      diberikan kepada malaikat maupun jin.
+    </p>
+
+    <p>
+      Jika Bab I berbicara tentang <em>materi</em> asal manusia, Bab II berbicara
+      tentang <em>forma</em> manusia. Materi yang dipilih adalah tanah, tetapi
+      forma yang diberikan kepadanya adalah <em>aḥsanu taqwīm</em>—bentuk yang
+      paling indah dan paling sempurna. Dua ayat berikutnya dalam Surah At-Tīn
+      menjadi poros seluruh antropologi Qur'āni: keunggulan manusia bukan hadiah
+      permanen, melainkan potensi yang hanya teraktualisasi melalui iman dan amal.
+    </p>
+
+    <div class="verse">
+      <div class="ref">QS. At-Tīn (95) : 4–6</div>
+      <div class="arabic">
+        لَقَدْ خَلَقْنَا الْإِنسَانَ فِي أَحْسَنِ تَقْوِيمٍ<br>
+        ثُمَّ رَدَدْنَاهُ أَسْفَلَ سَافِلِينَ<br>
+        إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ
+      </div>
+      <div class="translation">
+        "Sungguh, Kami telah menciptakan manusia dalam bentuk yang sebaik-baiknya.
+        Kemudian Kami kembalikan dia ke tempat yang serendah-rendahnya,
+        kecuali orang-orang yang beriman dan mengerjakan kebajikan;
+        maka mereka akan mendapat pahala yang tidak terputus."
+      </div>
+      <div class="attribution">— Al-Qur'ān, Surah At-Tīn ayat 4–6</div>
+    </div>
+
+    <p>
+      Kata <em>taqwīm</em> dari akar kata <em>q-w-m</em> berarti "yang berdiri tegak"-
+      sebuah bentuk yang simultan merupakan postur fisik (berdiri tegak sebagai
+      spesies) dan postur eksistensial (mampu memikul tanggung jawab moral).
+      Manusia adalah satu-satunya makhluk yang berdiri tegak secara anatomis dan
+      sekaligus tegak secara moral—dua tegakan yang harus dipertahankan bersamaan.
+      Bila tegakan moral roboh, ia jatuh ke <em>asfala sāfilīn</em>, tempat
+      terendah, lebih rendah dari tanah yang menjadi asalnya.
+    </p>
+
+    <div class="tafsir">
+      <div class="scholar">Tafsir · Quraish Shihab</div>
+      <p>
+        "Aḥsanu taqwīm mengandung makna ganda: keindahan fisik dan keindahan
+        potensi spiritual. Manusia diberi akal, kehendak, dan kesadaran—tiga
+        potensi yang tidak dimiliki makhluk lain. Tetapi ketiga potensi itu,
+        jika tidak disalurkan melalui iman dan amal saleh, justru menjadi sebab
+        kerendahan; karena akal tanpa iman dapat melahirkan kejahatan yang
+        lebih sistematis dari binatang buas."
+      </p>
+    </div>
+
+    <p>
+      Di sinilah letak paradoks antropologis Islam: manusia diciptakan dengan
+      sifat yang sempurna (<em>fi aḥsani taqwīm</em>), namun ia tidak otomatis
+      berada pada tingkat kesempurnaan itu. Kesempurnaan adalah titik berangkat,
+      bukan titik capai. Tanah—materi yang dipilih—mengisyaratkan bahwa manusia
+      adalah makhluk yang <em>perlu diolah</em>: dibentuk, dikeringkan, ditiupi
+      ruh, dan akhirnya diberi amanah. Proses ini menjelaskan mengapa sebagian
+      manusia bisa sangat tinggi (para nabi dan siddīqīn), sementara sebagian
+      lain bisa lebih rendah dari tanah (para penghuni <em>asfala sāfilīn</em>).
+    </p>
+
+    <div class="pullquote">
+      <div class="arabic">فِي أَحْسَنِ تَقْوِيمٍ</div>
+      <div class="divider"></div>
+      <div class="trans">"dalam sebaik-baik bentuk"</div>
+    </div>
+
+    <p>
+      Hadits berikut menambahkan dimensi penting: kesempurnaan yang diberikan
+      kepada Adam—dan kepada seluruh anak cucunya—terjadi <em>setelah</em>
+      Allah meniupkan ruh ke dalam jasad yang dibentuk dari tanah. Momen peniupan
+      ruh itulah yang menjadi batas antara keramah mati (gerabah yang berbunyi)
+      dan kehidupan (yang bertaqwa atau ingkar).
+    </p>
+
+    <div class="hadith">
+      <span class="label">Ḥadīts · Sahih</span>
+      <div class="arabic">
+        أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: «إِنَّ اللَّهَ عَزَّ وَجَلَّ لَمَّا
+        خَلَقَ آدَمَ مَسَحَ ظَهْرَهُ فَسَقَطَ مِنْ ظَهْرِهِ كُلُّ نَسَمَةٍ هُوَ خَالِقُهَا مِنْ
+        ذُرِّيَّتِهِ إِلَى يَوْمِ الْقِيَامَةِ»
+      </div>
+      <div class="translation">
+        "Bahwa Rasulullah ṣallallāhu ‘alaihi wa sallam bersabda: 'Sesungguhnya
+        Allah ‘Azza wa Jalla, ketika menciptakan Adam, mengusap punggungnya,
+        maka dari punggungnya jatuhlah setiap jiwa yang Dia ciptakan dari
+        keturunannya hingga hari kiamat.'"
+      </div>
+      <div class="source">— Sunan at-Tirmidzī no. 3076 (hasan); juga diriwayatkan oleh Ahmad dan Abu Dāwūd</div>
+    </div>
+
+    <p>
+      Hadits ini—dikenal sebagai hadits <em>mitsaq</em> (perjanjian)—menegaskan
+      bahwa kesempurnaan manusia tidak hanya berbentuk jasmani, melainkan juga
+      kontrak spiritual. Sebelum ruh-ruh anak Adam dilahirkan ke dunia, mereka
+      telah mengambil perjanjian (<em>alastu bi-rabbikum</em>, QS. Al-A‘rāf: 172).
+      Dengan demikian, kesempurnaan yang dimaksud dalam Surah At-Tīn adalah
+      kesempurnaan yang disertai tanggung jawab—bukan kesempurnaan yang pasif.
+    </p>
+
+    <div class="grid-2">
+      <div class="concept-card">
+        <svg class="icon" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="#8B5A3C" stroke-width="1"/>
+          <circle cx="20" cy="20" r="10" stroke="#B8915A" stroke-width="1"/>
+          <circle cx="20" cy="20" r="3" fill="#5C3A23"/>
+        </svg>
+        <div class="arabic">فِطْرَة</div>
+        <div class="term">Fiṭrah</div>
+        <div class="desc">Kondisi asal manusia—cenderung mengenali tauhid dan kebaikan—yang dapat berubah karena lingkungan dan pilihan.</div>
+      </div>
+      <div class="concept-card">
+        <svg class="icon" viewBox="0 0 40 40" fill="none">
+          <path d="M20 6 L34 14 L34 26 L20 34 L6 26 L6 14 Z" stroke="#8B5A3C" stroke-width="1" fill="none"/>
+          <path d="M20 12 L28 17 L28 23 L20 28 L12 23 L12 17 Z" stroke="#B8915A" stroke-width="1" fill="none"/>
+        </svg>
+        <div class="arabic">أَمَانَة</div>
+        <div class="term">Amanah</div>
+        <div class="desc">Beban moral yang ditolak langit, bumi, dan gunung, tetapi diterima manusia—penyebab utama potensi naik atau jatuh.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= BAB 3: GENGGAM BUMI ============= -->
+<section class="chapter" id="bab3">
+  <div class="container">
+    <div class="chapter-num">Bab III</div>
+    <h2 class="chapter-title">Segenggam dari Seluruh Bumi</h2>
+
+    <p class="lead">
+      Mengapa manusia berbeda-beda? Mengapa ada yang mudah, ada yang sulit;
+      ada yang baik, ada yang jahat; ada yang beriman, ada yang kafir?
+      Jawaban Qur'āni dan Nubuwwah berpusat pada satu hadits yang menjadi
+      kunci seluruh refleksi ini.
+    </p>
+
+    <p>
+      Hadits berikut—diriwayatkan oleh sahabat Abū Mūsā al-Asy‘arī—is
+      merupakan teks paling fundamental untuk memahami keragaman manusia
+      dalam tradisi Islam. Hadits ini menjelaskan bahwa Allah tidak mengambil
+      tanah dari satu titik saja ketika membentuk Adam, melainkan dari
+      <em>seluruh permukaan bumi</em>. Konsekuensinya, anak cucu Adam
+      mewarisi karakter tanah yang berbeda-beda—dan dengan karakter yang
+      berbeda itu, mereka dihadapkan pada ujian yang berbeda pula.
+    </p>
+
+    <div class="hadith">
+      <span class="label">Ḥadīts · Hasan Ṣaḥīḥ</span>
+      <div class="arabic">
+        عَنْ أَبِي مُوسَى الْأَشْعَرِيِّ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ
+        صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: «إِنَّ اللَّهَ عَزَّ وَجَلَّ خَلَقَ آدَمَ مِنْ قَبْضَةٍ
+        قَبَضَهَا مِنْ جَمِيعِ الْأَرْضِ، فَجَاءَ بَنُو آدَمَ عَلَى قَدْرِ الْأَرْضِ، مِنْهُمُ
+        الْأَبْيَضُ وَالْأَحْمَرُ وَالْأَسْوَدُ وَبَيْنَ ذَلِكَ، وَالسَّهْلُ وَالْحَزْنُ،
+        وَالْخَبِيثُ وَالطَّيِّبُ»
+      </div>
+      <div class="translation">
+        "Dari Abū Mūsā al-Asy‘arī raḍiyallāhu ‘anhu, ia berkata: Rasulullah
+        ṣallallāhu ‘alaihi wa sallam bersabda: 'Sesungguhnya Allah ‘Azza wa
+        Jalla menciptakan Adam dari segenggam yang diambil-Nya dari seluruh
+        bumi. Maka anak-anak Adam datang sesuai kadar tanah tersebut:
+        ada yang putih, merah, hitam, dan di antara keduanya; ada yang mudah
+        (as-sahl) dan ada yang sulit (al-ḥazn); ada yang jahat dan ada yang baik.'"
+      </div>
+      <div class="source">— Sunan at-Tirmidzī no. 2955 (hasan ṣaḥīḥ); juga diriwayatkan oleh Aḥmad, Abū Dāwūd, dan Ibnu Ḥibbān</div>
+    </div>
+
+    <p>
+      Hadits ini menyajikan empat pasangan dikotomis yang menjadi peta
+      keragaman manusia:
+    </p>
+
+    <h3>Empat Pasangan Sifat dari Empat Penjuru Tanah</h3>
+
+    <div class="grid-2">
+      <div class="concept-card">
+        <div class="arabic">الأَبْيَضُ · الأَحْمَرُ · الأَسْوَدُ</div>
+        <div class="term">Warna Kulit</div>
+        <div class="desc">Keragaman fisik—geografi tanah menentukan pigmentasi dan bentuk tubuh.</div>
+      </div>
+      <div class="concept-card">
+        <div class="arabic">وَبَيْنَ ذَلِكَ</div>
+        <div class="term">Warna Antara</div>
+        <div class="desc">Mayoritas manusia berada di antara dua kutub ekstrem; variasi tak terhitung.</div>
+      </div>
+      <div class="concept-card">
+        <div class="arabic">السَّهْلُ · الْحَزْنُ</div>
+        <div class="term">Mudah vs. Sulit</div>
+        <div class="desc">Ada jiwa yang lembut dan mudah menerima kebenaran; ada yang keras dan sulit ditaklukkan.</div>
+      </div>
+      <div class="concept-card">
+        <div class="arabic">الْخَبِيثُ · الطَّيِّبُ</div>
+        <div class="term">Buruk vs. Baik</div>
+        <div class="desc">Ada akhlak yang buruk—lahir dari tanah tandus; ada akhlak yang baik—lahir dari tanah subur.</div>
+      </div>
+    </div>
+
+    <p>
+      Ibnu Katsīr dalam tafsirnya atas hadits ini menegaskan bahwa keragaman
+      tersebut bukan kelemahan sistem penciptaan, melainkan <em>tiqdīr ilāhī</em>
+      (ketentuan ilahi) yang menjadi panggung ujian. Seandainya Allah menciptakan
+      seluruh manusia dari satu jenis tanah saja, niscaya tidak akan ada keragaman;
+      dan tanpa keragaman, ujian kehendak dan tanggung jawab moral menjadi
+      tidak bermakna. Justru karena sebagian lahir dari tanah yang <em>as-sahl</em>
+      (mudah) dan sebagian dari tanah yang <em>al-ḥazn</em> (sulit), maka
+      kesalehan manusia memiliki bobot yang berbeda-beda.
+    </p>
+
+    <div class="tafsir">
+      <div class="scholar">Tafsir · Ibnu Katsīr</div>
+      <p>
+        "Allah menciptakan Adam dari segenggam tanah yang diambil dari seluruh
+        permukaan bumi: dari tanahnya gunung, tanahnya lembah, tanahnya padang,
+        tanahnya pantai. Maka anak-anak Adam mewarisi karakter tanah asalnya.
+        Sebagian mewarisi kesuburan padang—mudah tumbuh keimanannya; sebagian
+        mewarisi kekerasan batu—sulit dilunakkan nasihat; sebagian mewarisi
+        keseimbangan tanah pegunungan—kokoh dan tidak mudah goyah."
+      </p>
+    </div>
+
+    <p>
+      Di sinilah letak inti pertanyaan refleksi ini: jika ada manusia yang lahir
+      dari tanah <em>as-sahl</em> (mudah) di wilayah "pertengahan bumi" yang subur,
+      dan ada manusia yang lahir dari tanah <em>al-ḥazn</em> (sulit) di "ujung
+      bumi" yang tandus dan terpencil, maka yang terakhir berada dalam kondisi
+      eksistensial yang paling berat. Ia harus memperjuangkan iman dari tanah
+      yang secara "naluriah" sulit menumbuhkan keimanan. Inilah pintu menuju
+      pembahasan dua bab berikutnya.
+    </p>
+  </div>
+</section>
+
+<!-- ============= BAB 4: PERTENGAHAN BUMI ============= -->
+<section class="chapter" id="bab4">
+  <div class="container">
+    <div class="chapter-num">Bab IV</div>
+    <h2 class="chapter-title">Pertengahan Bumi: Ummatan Wasaṭan sebagai Saksi</h2>
+
+    <p class="lead">
+      Jika "ujung bumi" adalah tempat kesulitan, maka "pertengahan bumi"
+      adalah tempat kesaksian. Al-Qur'ān memberi gelar <em>ummatan wasaṭan</em>
+      kepada umat Islam—komunitas yang berdiri di tengah, yang menjadi
+      saksi atas seluruh umat manusia.
+    </p>
+
+    <p>
+      Konsep <em>wasath</em> dalam Al-Qur'ān bukan sekadar posisi geografis atau
+      numerik (tengah di antara dua ekstrem). <em>Wasath</em> adalah kategori
+      moral: yang adil, yang seimbang, yang tidak condong ke salah satu kutub.
+      Inilah sebabnya para mufassir menerjemahkan <em>ummatan wasaṭan</em> sebagai
+      "umat yang adil dan pilihan" (Ibnu Katsīr), "umat terbaik di antara
+      umat-umat" (Quraish Shihab), atau "komunitas tengah yang menjadi penyeimbang"
+      (Ṭabāṭabā'ī).
+    </p>
+
+    <div class="verse">
+      <div class="ref">QS. Al-Baqarah (2) : 143</div>
+      <div class="arabic">
+        وَكَذَٰلِكَ جَعَلْنَاكُمْ أُمَّةً وَسَطًا لِّتَكُونُوا شُهَدَاءَ عَلَى النَّاسِ
+        وَيَكُونَ الرَّسُولُ عَلَيْكُمْ شَهِيدًا
+      </div>
+      <div class="translation">
+        "Dan demikian pula Kami telah menjadikan kamu (umat Islam) umat yang
+        adil dan pilihan agar kamu menjadi saksi atas (perbuatan) manusia dan
+        agar Rasul (Muhammad) menjadi saksi atas (perbuatan) kamu."
+      </div>
+      <div class="attribution">— Al-Qur'ān, Surah Al-Baqarah ayat 143</div>
+    </div>
+
+    <p>
+      Frasa <em>li-takūnū syuhadā'a ‘alan-nās</em>—"agar kamu menjadi saksi atas
+      manusia"—adalah frasa kunci. Kata <em>syuhadā'</em> (jamak dari <em>syahīd</em>)
+      berarti "para saksi". Saksi dalam bahasa Arab (<em>shāhid</em>) bukan
+      sekadar pengamat; ia adalah pihak yang pengetahuannya menjadi rujukan hukum,
+      yang kesaksiannya menetapkan kebenaran atau menyangkal dusta. Umat wasath
+      bukan penonton sejarah; mereka adalah <em>pengukur kebenaran</em> sejarah.
+    </p>
+
+    <div class="tafsir">
+      <div class="scholar">Tafsir · Quraish Shihab</div>
+      <p>
+        "Ummatan wasathan adalah umat yang berada di tengah—tidak condong kepada
+        dunia semata, tidak pula kepada akhirat semata; tidak ekstrem dalam
+        ketat (tasyaddud), tidak ekstrem dalam longgar (takhayyul). Karena
+        keseimbangan inilah mereka layak menjadi saksi atas umat lain: mereka
+        melihat dari titik yang adil, bukan dari sudut yang miring."
+      </p>
+    </div>
+
+    <p>
+      Yang menarik, posisi "pertengahan" ini bersifat <em>geografis-moral</em>—
+      dan dalam tradisi Islam, kota Madīnah (atau lebih spesifik, Ka‘bah di
+      Makkah) dianggap sebagai pusat bumi yang simbolik. Dari titik ini, umat
+      wasath menyebar ke empat penjuru untuk menjadi saksi—ke utara, selatan,
+      timur, dan barat—membawa amanah <em>rḥmatan li-l-‘ālamīn</em> ke
+      "ujung-ujung bumi".
+    </p>
+
+    <h3>Dimensi Tiga Wasath</h3>
+
+    <div class="grid-2">
+      <div class="concept-card">
+        <div class="arabic">وَسَطٌ</div>
+        <div class="term">Wasaṭ · Keseimbangan</div>
+        <div class="desc">Tidak condong ke ekstrem apa pun—ketat maupun longgar, dunia maupun akhirat.</div>
+      </div>
+      <div class="concept-card">
+        <div class="arabic">شُهَدَاء</div>
+        <div class="term">Syuhadā' · Saksi</div>
+        <div class="desc">Yang kesaksiannya menjadi rujukan—pengetahuan yang menetapkan kebenaran atas umat lain.</div>
+      </div>
+    </div>
+
+    <p>
+      Pertengahan bumi, dalam kerangka ini, bukan sekadar tempat yang nyaman
+      untuk ditinggali. Ia adalah posisi <em>amanah berat</em>: mereka yang
+      berdiri di tengah harus rela diawasi oleh Rasulullah (sebagai syahīd
+      ‘alaykum), dan harus rela menjadi syuhadā’ ‘alan-nās—ditugasi menegakkan
+      kebenaran untuk umat-umat lain, termasuk mereka yang berada di ujung bumi.
+      Mereka yang berada di pertengahan tidak boleh lupa bahwa kesaksian mereka
+      akan dimintai pertanggungjawaban.
+    </p>
+
+    <p>
+      Namun ada ironi historis di sini: mereka yang ditempatkan di "pertengahan
+      bumi"—yang subur, yang mudah (as-sahl), yang dekat dengan pusat wahyu—
+      justru sering kali paling rentan terhadap kemalasan rohani. Tanah yang
+      subur dapat menumbuhkan apa saja, termasuk rumput liar. Maka posisi
+      pertengahan bukan jaminan kesalehan; ia adalah <em>potensi</em> kesalehan
+      yang tertinggi sekaligus <em>potensi</em> kerendahan yang terdalam. Inilah
+      persis ditegaskan Surah At-Tīn: dari <em>aḥsanu taqwīm</em>, manusia dapat
+      jatuh ke <em>asfala sāfilīn</em>.
+    </p>
+  </div>
+</section>
+
+<!-- ============= BAB 5: UJUNG BUMI ============= -->
+<section class="chapter" id="bab5">
+  <div class="container">
+    <div class="chapter-num">Bab V</div>
+    <h2 class="chapter-title">Ujung Bumi: Paling Sulit dan Paling Mulia</h2>
+
+    <p class="lead">
+      "Dan paling sulit lagi adalah di ujung bumi." Pernyataan ini—yang menjadi
+      inti pertanyaan—membutuhkan tiga lapis tafsir: geografis, eksistensial,
+      dan eskatologis. Di setiap lapis, "ujung bumi" menunjuk pada kondisi
+      yang paling berat tetapi juga paling tinggi martabatnya.
+    </p>
+
+    <h3>Lapis I — Geografis: Keterpencilan sebagai Ujian Iman</h3>
+
+    <p>
+      Secara geografis, "ujung bumi" adalah wilayah-wilayah yang jauh dari pusat
+      peradaban Islam—pegunungan terpencil, kepulauan terluar, padang pasir yang
+      tak bertuan, kutub yang beku. Di tempat-tempat seperti ini, perjumpaan
+      dengan wahyu menjadi langka, ulama sedikit, jamaah jarang, dan godaan untuk
+      meninggalkan agama sangat kuat. Hadits Nabi ṣallallāhu ‘alaihi wa sallam
+      yang menyebut tentang "orang yang memegang agamanya di akhir zaman seperti
+      memegang bara api" menjadi sangat relevan di sini.
+    </p>
+
+    <div class="hadith">
+      <span class="label">Ḥadīts · Sahih</span>
+      <div class="arabic">
+        عَنْ أَنَسِ بْنِ مَالِكٍ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ
+        عَلَيْهِ وَسَلَّمَ: «يَأْتِي عَلَى النَّاسِ زَمَانٌ الصَّابِرُ فِيهِمْ عَلَى دِينِهِ
+        كَالْقَابِضِ عَلَى الْجَمْرِ»
+      </div>
+      <div class="translation">
+        "Dari Anas bin Mālik raḍiyallāhu ‘anhu, ia berkata: Rasulullah
+        ṣallallāhu ‘alaihi wa sallam bersabda: 'Akan datang kepada manusia
+        suatu zaman, orang yang sabar (bertahan) dalam agamanya di tengah
+        mereka seperti orang yang memegang bara api.'"
+      </div>
+      <div class="source">— Sunan at-Tirmidzī no. 2260 (hasan); juga diriwayatkan oleh Aḥmad dan Ibnu Mājah</div>
+    </div>
+
+    <p>
+      Di "ujung bumi" geografis, kesalehan menjadi mahal. Seseorang harus memegang
+      iman tanpa masjid di sekitarnya, tanpa khotbah Jum‘at yang teratur, tanpa
+      ulama yang dapat ditanya. Tanah yang dijaganya memang <em>al-ḥazn</em>—
+      sulit, keras, dan tidak subur secara spiritual. Tetapi justru karena
+      kesulitan ini, kesalehan yang lahir di ujung bumi memiliki bobot yang
+      berbeda: ia adalah kesalehan yang bertarung melawan geografi itu sendiri.
+    </p>
+
+    <h3>Lapis II — Eksistensial: Tepi Akhir Sejarah</h3>
+
+    <p>
+      Secara eksistensial, "ujung bumi" dapat dimaknai sebagai <em>tepi akhir
+      zaman</em>—akhir sejarah manusia, ketika generasi-generasi terakhir lahir
+      dengan fitrah yang masih sama tetapi menghadapi tantangan yang luar biasa
+      berat. Hadits tentang "umat-umat yang datang seperti anak panah yang menyerang
+      mangsa" menggambarkan bahwa generasi akhir zaman akan menghadapi fitnah yang
+      belum pernah dialami generasi sebelumnya.
+    </p>
+
+    <div class="verse">
+      <div class="ref">QS. Al-‘Ankabūt (29) : 2–3</div>
+      <div class="arabic">
+        أَحَسِبَ النَّاسُ أَن يُتْرَكُوا أَن يَقُولُوا آمَنَّا وَهُمْ لَا يُفْتَنُونَ<br>
+        وَلَقَدْ فَتَنَّا الَّذِينَ مِن قَبْلِهِمْ فَلَيَعْلَمَنَّ اللَّهُ الَّذِينَ صَدَقُوا
+        وَلَيَعْلَمَنَّ الْكَاذِبِينَ
+      </div>
+      <div class="translation">
+        "Apakah manusia mengira bahwa mereka akan dibiarkan hanya mengatakan,
+        'Kami telah beriman,' dan mereka tidak diuji? Dan sungguh, Kami telah
+        menguji orang-orang yang sebelum mereka, maka Allah pasti mengetahui
+        orang-orang yang benar dan pasti mengetahui orang-orang yang dusta."
+      </div>
+      <div class="attribution">— Al-Qur'ān, Surah Al-‘Ankabūt ayat 2–3</div>
+    </div>
+
+    <p>
+      Ujian di "ujung bumi" eksistensial ini bersifat <em>metafisis</em>: keraguan
+      yang menyerbu dari segala arah, informasi yang membombardir kesadaran,
+      materialisme yang melumpuhkan fitrah, ilmu-ilmu yang seolah-olah menggantikan
+      wahyu. Di sinilah, mereka yang tetap beriman—yang tetap shalat, tetap puasa,
+      tetap mengucapkan kalimat tauhid—menempati posisi yang paling tinggi di sisi
+      Allah, karena iman mereka melewati filter yang paling halus.
+    </p>
+
+    <h3>Lapis III — Eskatologis: Ujung sebagai Awal Kebangkitan</h3>
+
+    <p>
+      Secara eskatologis, "ujung bumi" menyatu dengan <em>ujung dunia</em>—
+      hari kiamat, yaum al-qiyāmah. Pada titik ini, kesaksian manusia mencapai
+      puncaknya: mereka yang beriman di ujung bumi (secara geografis maupun
+      eksistensial) akan menjadi saksi—<em>syuhadā'</em>—yang kesaksiannya
+      menutup sejarah. Inilah makna paling dalam dari frasa Nabi ṣallallāhu
+      ‘alaihi wa sallam: "ummat-ku ini akan menjadi saksi atas umat-umat yang
+      lain pada hari kiamat".
+    </p>
+
+    <div class="hadith">
+      <span class="label">Ḥadīts · Muttafaq ‘alaih</span>
+      <div class="arabic">
+        عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ
+        صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: «يُدْعَى نُوحٌ يَوْمَ الْقِيَامَةِ فَيُقَالُ لَهُ:
+        هَلْ بَلَّغْتَ؟ فَيَقُولُ: نَعَمْ أَيْ رَبِّ. فَيُقَالُ لِقَوْمِهِ: هَلْ بَلَّغَكُمْ؟
+        فَيَقُولُونَ: مَا أَتَانَا مِنْ نَذِيرٍ. فَيُقَالُ لَهُ: مَنْ يَشْهَدُ لَكَ؟
+        فَيَقُولُ: مُحَمَّدٌ وَأُمَّتُهُ»
+      </div>
+      <div class="translation">
+        "Dari Abū Sa‘īd al-Khudrī raḍiyallāhu ‘anhu, ia berkata: Rasulullah
+        ṣallallāhu ‘alaihi wa sallam bersabda: 'Nabi Nūḥ ‘alaihis-salām akan
+        dipanggil pada hari kiamat, lalu dikatakan kepadanya: Apakah kamu telah
+        menyampaikan? Ia menjawab: Ya, ya Rabbi. Lalu ditanyakan kepada kaumnya:
+        Apakah ia telah menyampaikan kepada kalian? Mereka menjawab: Tidak ada
+        pemberi peringatan yang datang kepada kami. Lalu dikatakan kepada Nūḥ:
+        Siapa yang menjadi saksi bagimu? Ia menjawab: Muhammad dan umatnya.'"
+      </div>
+      <div class="source">— Ṣaḥīḥ al-Bukhārī no. 3339 dan Ṣaḥīḥ Muslim no. 2860 (muttafaq ‘alaih)</div>
+    </div>
+
+    <p>
+      Hadits ini mengikat benang merah dari seluruh refleksi: manusia yang
+      diciptakan dari tanah—dengan sifat yang sempurna (<em>aḥsanu taqwīm</em>)
+      —dari segenggam yang diambil dari seluruh bumi (keragaman <em>as-sahl</em>
+      dan <em>al-ḥazn</em>)—yang berdiri di pertengahan sebagai <em>ummatan
+      wasaṭan</em>—akan menjadi <em>syuhadā'</em> (saksi) di ujung bumi, di
+      hari kiamat. Yang paling sulit—ujung bumi—justru menjadi panggung tertinggi
+      kesaksian. Karena kesaksian yang paling berbobot adalah kesaksian yang
+      lahir dari kesulitan yang paling berat.
+    </p>
+
+    <div class="pullquote">
+      <div class="arabic">وَالْعَصْرِ · إِنَّ الْإِنسَانَ لَفِي خُسْرٍ</div>
+      <div class="divider"></div>
+      <div class="trans">"Demi masa. Sesungguhnya manusia benar-benar berada dalam kerugian."</div>
+    </div>
+
+    <p>
+      Surah Al-‘Aṣr ini, hanya tiga ayat, menjadi ringkasan seluruh perjalanan
+      manusia: dari tanah, ke kesempurnaan, ke kerugian universal—<em>kecuali</em>
+      mereka yang menggabungkan empat hal: <em>īmān</em> (keimanan),
+      <em>‘amal ṣāliḥ</em> (amal saleh), <em>tawāṣī bi-l-ḥaqq</em> (saling
+      menasihati dalam kebenaran), dan <em>tawāṣī bi-l-ṣabr</em> (saling
+      menasihati dalam kesabaran). Empat inilah yang membuat manusia di ujung
+      bumi—di mana pun ujung itu berada—tetap berdiri tegak sebagai saksi.
+    </p>
+  </div>
+</section>
+
+<!-- ============= BAB 6: DIAGRAM KONSEPTUAL ============= -->
+<section class="chapter" id="bab6">
+  <div class="container">
+    <div class="chapter-num">Bab VI</div>
+    <h2 class="chapter-title">Peta Konseptual: Spektrum Tanah, Spektrum Manusia</h2>
+
+    <p class="lead">
+      Untuk merangkum kerangka yang dibangun dalam Bab I–V, diagram berikut
+      memetakan korespondensi antara spektrum tanah (geografis-moral) dan
+      spektrum kondisi manusia yang lahir darinya.
+    </p>
+
+    <div class="diagram-wrap">
+      <div class="caption">Diagram 1 · Spektrum Penciptaan dan Kesaksian</div>
+      <div class="title">Dari Pertengahan Bumi menuju Ujung Bumi</div>
+
+      <svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="soilGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#A57648"/>
+            <stop offset="50%" stop-color="#8B5A3C"/>
+            <stop offset="100%" stop-color="#5C3A23"/>
+          </linearGradient>
+          <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#B8915A"/>
+            <stop offset="100%" stop-color="#5C3A23"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Earth band -->
+        <rect x="40" y="80" width="600" height="40" fill="url(#soilGrad)" opacity="0.85"/>
+
+        <!-- Center marker -->
+        <circle cx="340" cy="100" r="8" fill="#FAF8F5" stroke="#B8915A" stroke-width="2"/>
+        <text x="340" y="74" text-anchor="middle" font-family="Lora, serif" font-size="11" fill="#5C3A23" font-style="italic">pertengahan bumi · wasath</text>
+        <text x="340" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70" letter-spacing="1">tanah subur · as-sahl</text>
+
+        <!-- Left end -->
+        <circle cx="80" cy="100" r="6" fill="#5C3A23"/>
+        <text x="80" y="74" text-anchor="middle" font-family="Lora, serif" font-size="11" fill="#5C3A23" font-style="italic">ujung barat</text>
+        <text x="80" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70" letter-spacing="1">tanah tandus · al-ḥazn</text>
+
+        <!-- Right end -->
+        <circle cx="600" cy="100" r="6" fill="#5C3A23"/>
+        <text x="600" y="74" text-anchor="middle" font-family="Lora, serif" font-size="11" fill="#5C3A23" font-style="italic">ujung timur</text>
+        <text x="600" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70" letter-spacing="1">tanah keras · al-ḥazn</text>
+
+        <!-- Connecting line: spectrum of difficulty -->
+        <line x1="80" y1="160" x2="600" y2="160" stroke="url(#lineGrad)" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="340" y="178" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#8B5A3C" letter-spacing="2">TINGKAT KESULITAN EKSISTENSIAL →</text>
+
+        <!-- Arrows from center to ends -->
+        <path d="M 340 130 L 80 200" stroke="#B8915A" stroke-width="1" fill="none" opacity="0.7"/>
+        <path d="M 340 130 L 340 200" stroke="#B8915A" stroke-width="1" fill="none" opacity="0.4"/>
+        <path d="M 340 130 L 600 200" stroke="#B8915A" stroke-width="1" fill="none" opacity="0.7"/>
+
+        <!-- Three human positions -->
+        <g transform="translate(80, 210)">
+          <circle cx="0" cy="0" r="14" fill="#5C3A23"/>
+          <text x="0" y="4" text-anchor="middle" font-family="Amiri, serif" font-size="14" fill="#FAF8F5" font-weight="700">إ</text>
+          <text x="0" y="36" text-anchor="middle" font-family="Lora, serif" font-size="10" fill="#5C3A23" font-style="italic">manusia ujung</text>
+          <text x="0" y="50" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70">paling sulit</text>
+          <text x="0" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70">saksi akhir</text>
+        </g>
+
+        <g transform="translate(340, 210)">
+          <circle cx="0" cy="0" r="14" fill="#B8915A"/>
+          <text x="0" y="4" text-anchor="middle" font-family="Amiri, serif" font-size="14" fill="#FAF8F5" font-weight="700">و</text>
+          <text x="0" y="36" text-anchor="middle" font-family="Lora, serif" font-size="10" fill="#5C3A23" font-style="italic">manusia wasath</text>
+          <text x="0" y="50" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70">pertengahan</text>
+          <text x="0" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70">saksi umat</text>
+        </g>
+
+        <g transform="translate(600, 210)">
+          <circle cx="0" cy="0" r="14" fill="#5C3A23"/>
+          <text x="0" y="4" text-anchor="middle" font-family="Amiri, serif" font-size="14" fill="#FAF8F5" font-weight="700">إ</text>
+          <text x="0" y="36" text-anchor="middle" font-family="Lora, serif" font-size="10" fill="#5C3A23" font-style="italic">manusia ujung</text>
+          <text x="0" y="50" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70">paling sulit</text>
+          <text x="0" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70">saksi akhir</text>
+        </g>
+
+        <!-- Hadith tags -->
+        <text x="80" y="300" text-anchor="middle" font-family="Noto Naskh Arabic, serif" font-size="13" direction="rtl" fill="#5C3A23">الْحَزْن</text>
+        <text x="80" y="316" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70">sulit · keras</text>
+
+        <text x="340" y="300" text-anchor="middle" font-family="Noto Naskh Arabic, serif" font-size="13" direction="rtl" fill="#B8915A">السَّهْل · الْوَسَط</text>
+        <text x="340" y="316" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70">mudah · tengah</text>
+
+        <text x="600" y="300" text-anchor="middle" font-family="Noto Naskh Arabic, serif" font-size="13" direction="rtl" fill="#5C3A23">الْحَزْن</text>
+        <text x="600" y="316" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#8A7E70">sulit · keras</text>
+
+        <!-- Bottom axis label -->
+        <line x1="40" y1="340" x2="640" y2="340" stroke="#E5DDD2" stroke-width="1"/>
+        <text x="340" y="362" text-anchor="middle" font-family="Lora, serif" font-style="italic" font-size="12" fill="#8A7E70">
+          posisi geografis-moral manusia dalam spektrum tanah dan kesaksian
+        </text>
+      </svg>
+
+      <div class="legend">
+        <span><i style="background:#B8915A"></i>Pertengahan (wasath)</span>
+        <span><i style="background:#5C3A23"></i>Ujung (al-ḥazn)</span>
+        <span><i style="background:linear-gradient(90deg,#B8915A,#5C3A23)"></i>Spektrum kesulitan</span>
+      </div>
+    </div>
+
+    <h3>Penjelasan Diagram</h3>
+
+    <p>
+      Diagram di atas menunjukkan tiga posisi eksistensial yang dapat ditempati
+      manusia berdasarkan hadits "segenggam dari seluruh bumi" (Bab III) dan
+      konsep <em>ummatan wasaṭan</em> (Bab IV). Posisi <em>wasath</em> (tengah)
+      adalah posisi kesaksian umum—mereka yang diberi kemudahan <em>as-sahl</em>
+      dan dekat dengan sumber wahyu. Posisi "ujung" di kedua sisi—barat dan timur,
+      utara dan selatan, geografis dan eksistensial—adalah posisi kesulitan
+      <em>al-ḥazn</em>, tetapi sekaligus posisi <em>kesaksian akhir</em>: saksi
+      yang kesaksiannya lahir dari kesulitan tertinggi.
+    </p>
+
+    <p>
+      Yang penting dipahami: posisi "ujung" tidak berarti lebih rendah martabat.
+      Justru sebaliknya—karena kesulitan yang dijalani, kesalehan di ujung bumi
+      memiliki bobot yang lebih tinggi di sisi Allah. Inilah yang ditangkap oleh
+      para sahabat ketika mereka berbondong-bondong meninggalkan tanah air
+      (Makkah dan Madīnah, posisi wasath) untuk pergi ke "ujung-ujung bumi"—
+      ke Andalusia, ke Sind, ke Nusantara—menjadi saksi di tanah yang sulit.
+    </p>
+
+    <div class="tafsir">
+      <div class="scholar">Pelajaran · Posisi dan Amanah</div>
+      <p>
+        "Posisi pertengahan membawa amanah kesaksian umum; posisi ujung membawa
+        amanah kesaksian akhir. Tidak ada posisi tanpa amanah. Mereka yang
+        ditempatkan di tanah subur tidak boleh sombong—kesuburan adalah ujian
+        syukur. Mereka yang ditempatkan di tanah tandus tidak boleh putus asa—
+        tandus adalah ujian sabar. Keduanya, jika lulus, akan duduk sebagai
+        syuhadā' di hari kiamat."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============= BAB 7: PENUTUP ============= -->
+<section class="chapter" id="bab7">
+  <div class="container">
+    <div class="chapter-num">Bab VII</div>
+    <h2 class="chapter-title">Penutup: Tanah yang Berdiri Tegak</h2>
+
+    <p class="lead">
+      Refleksi ini berakhir di titik di mana ia dimulai: tanah. Tetapi tanah
+      yang dimaksud sekarang bukan tanah yang diam—melainkan tanah yang telah
+      diolah, dibentuk, ditiupi ruh, dan akhirnya berdiri tegak sebagai saksi.
+    </p>
+
+    <p>
+      Dari tanah (<em>ṭīn</em>, <em>ṣalṣāl</em>, <em>ḥama' masnūn</em>) Allah
+      membentuk Adam dengan <em>aḥsanu taqwīm</em>—bentuk paling sempurna.
+      Dari segenggam tanah yang diambil dari seluruh bumi, lahir anak-anak Adam
+      dengan keragaman <em>as-sahl</em> (mudah) dan <em>al-ḥazn</em> (sulit),
+      <em>ṭayyib</em> (baik) dan <em>khabīth</em> (buruk). Mereka yang ditempatkan
+      di pertengahan bumi mendapat gelar <em>ummatan wasaṭan</em>—komunitas tengah
+      yang menjadi <em>syuhadā' ‘alan-nās</em>, saksi atas seluruh umat manusia.
+      Mereka yang ditempatkan di ujung bumi menghadapi kesulitan tertinggi—
+      geografis, eksistensial, dan eskatologis—tetapi justru karena kesulitan
+      itu, kesaksian mereka menjadi paling berbobot.
+    </p>
+
+    <p>
+      Maka pertanyaan yang diajukan—<em>"paling sulit lagi adalah di ujung
+      bumi"</em>—bukan pernyataan kekalahan. Ia adalah pernyataan amanah.
+      Yang paling sulit bukan berarti yang paling hina; yang paling sulit
+      berarti yang paling tinggi panggung kesaksiannya. Mereka yang berdiri
+      tegak di ujung bumi—di pegunungan terpencil, di kepulauan terluar, di
+      tepi akhir sejarah—adalah penerus posisi para nabi: menyampaikan,
+      bersabar, bersaksi, dan pada akhirnya, dimintai kesaksian di hadapan
+      Allah pada hari di mana tidak ada ruh, tanah, maupun bara api yang
+      dapat berbohong.
+    </p>
+
+    <div class="verse">
+      <div class="ref">QS. Al-‘Aṣr (103) : 1–3</div>
+      <div class="arabic">
+        وَالْعَصْرِ<br>
+        إِنَّ الْإِنسَانَ لَفِي خُسْرٍ<br>
+        إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ
+      </div>
+      <div class="translation">
+        "Demi masa. Sesungguhnya manusia benar-benar berada dalam kerugian,
+        kecuali orang-orang yang beriman dan mengerjakan amal saleh serta
+        saling menasihati untuk kebenaran dan saling menasihati untuk kesabaran."
+      </div>
+      <div class="attribution">— Al-Qur'ān, Surah Al-‘Aṣr ayat 1–3</div>
+    </div>
+
+    <p>
+      Empat pengecualian dalam Surah Al-‘Aṣr ini—<em>īmān</em>, <em>‘amal
+      ṣāliḥ</em>, <em>tawāṣī bi-l-ḥaqq</em>, dan <em>tawāṣī bi-l-ṣabr</em>—adalah
+      empat pilar yang membuat manusia, dari posisi tanah apa pun ia berasal,
+      tetap berdiri tegak. Iman menjaga akar; amal saleh menjaga batang;
+      saling menasihati dalam kebenaran menjaga cabang; saling menasihati
+      dalam kesabaran menjaga daun. Empat pilar ini adalah <em>obat tanah</em>—
+      resep yang diberikan langsung oleh Allah untuk manusia yang diciptakan
+      dari tanah, agar tidak kembali menjadi tanah yang sia-sia.
+    </p>
+
+    <div class="pullquote">
+      <div class="arabic">وَتَوَاصَوْا بِالصَّبْرِ</div>
+      <div class="divider"></div>
+      <div class="trans">"dan saling menasihati dalam kesabaran"</div>
+    </div>
+
+    <p>
+      Demi kesabaran—khususnya—manusia di ujung bumi bertahan. Demi kesabaran
+      pula, manusia di pertengahan bumi tidak sombong. Dan demi kesabaran,
+      di hari kiamat nanti, kesaksian akan ditunaikan: tanah yang dahulu diam,
+      kini berdiri tegak, bersaksi atas apa yang telah diperbuat oleh putra-putranya
+      yang diciptakan darinya.
+    </p>
+
+    <div class="footnote">
+      <sup>※</sup> Catatan sumber: Teks ayat Al-Qur'ān mengikuti riwayat Ḥafṣ
+      ‘an ‘Āṣim. Terjemahan Indonesia disesuaikan dengan <em>Al-Qur'ān dan
+      Terjemahnya</em> (Kementerian Agama RI, edisi 2019) dengan beberapa
+      penyesuaian gaya bahasa untuk kejelasan akademis. Hadits-hadits dikutip
+      dari <em>Sunan at-Tirmidzī</em>, <em>Ṣaḥīḥ al-Bukhārī</em>, dan
+      <em>Ṣaḥīḥ Muslim</em> dengan nomor hadits sesuai standar global.
+      Tafsir Ibnu Katsīr dan tafsir <em>Al-Mishbāḥ</em> (Quraish Shihab)
+      menjadi rujukan utama untuk penjelasan kontekstual.
+    </div>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer>
+  <div class="container">
+    <svg class="ornament" viewBox="0 0 48 48" fill="none">
+      <g stroke="#8B5A3C" stroke-width="0.8" opacity="0.7">
+        <rect x="6" y="6" width="36" height="36" transform="rotate(0 24 24)"/>
+        <rect x="6" y="6" width="36" height="36" transform="rotate(45 24 24)"/>
+        <circle cx="24" cy="24" r="10"/>
+      </g>
+      <circle cx="24" cy="24" r="2.5" fill="#B8915A"/>
+    </svg>
+
+    <div class="closing">وَاللَّهُ أَعْلَمُ</div>
+    <div class="closing-translit">"Wallāhu a‘lam — dan Allah Maha Mengetahui"</div>
+
+    <div class="colophon">
+      <span>HTML · Akademis</span>
+      <span>·</span>
+      <span>Indonesia &amp; Arab</span>
+      <span>·</span>
+      <span>2026</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
